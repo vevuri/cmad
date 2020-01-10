@@ -1,5 +1,8 @@
 package com.glarimy.cmad;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Hello {
 	private String message;
 
@@ -10,5 +13,4 @@ public class Hello {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-
 }
