@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface QuizRepository extends JpaRepository<Question, Integer> {
-	//public List<Question> findBySubjectAndLevel(String subject, int level);
 	public Long countByQidAndAnswer(int qid, String answer);
 	public Page<Question> findBySubjectAndLevel(String subject, int level, Pageable page);
 
