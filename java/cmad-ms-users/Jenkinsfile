@@ -2,7 +2,7 @@ pipeline {
 	agent any
 
 	tools{
-		maven 'Maven 3.6.1'
+		maven 'maven3.6.1'
 	}
 
     	stages{
@@ -27,7 +27,7 @@ pipeline {
 				echo 'Packaging users app'
  				dir('java/cmad-ms-users'){
  					sh 'mvn package -DskipTests'
-					archiveArtifacts artifacts: 'java/cmad-ms-users/target/*.jar', fingerprint: true
+					archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
 				}
 			}
  		}
