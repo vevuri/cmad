@@ -52,7 +52,7 @@ pipeline {
         			echo 'Packaging users app with docker'
         			script{
 					docker.withRegistry('https://index.docker.io/v1/', 'dockervevuri') {
-						def usersImage = docker.build("vevuri/users:v${env.BUILD_ID}", “./java/cmad-ms-users”)
+						def usersImage = docker.build("vevuri/users:v${env.BUILD_ID}", "./java/cmad-ms-users")
 						usersImage.push()
 						usersImage.push("latest")
 					}
