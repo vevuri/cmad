@@ -27,7 +27,7 @@ pipeline {
 				echo 'Packaging users app'
  				dir('java/cmad-ms-users'){
  					sh 'mvn package -DskipTests'
-					archiveArtifacts artifacts: 'java/cmad-ms-users/target/*.jar', fingerprint: true
+					archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
 				}
 			}
  		}
